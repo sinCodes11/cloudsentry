@@ -1,0 +1,49 @@
+# CloudSentry Configuration
+# Copy to config.yaml and update values
+
+oci:
+  # Path to OCI config file
+  config_file: ~/.oci/config
+  # Profile to use from config file
+  profile: DEFAULT
+  # Compartments to scan
+  # Use "ALL" to recursively scan all compartments, or list specific OCIDs
+  compartments:
+    - ALL
+    # - ocid1.compartment.oc1..aaaaaaaaxxxxxxxxxxxxxxxx
+
+database:
+  host: localhost
+  port: 5432
+  name: cloudsentry
+  user: cloudsentry
+  # Use environment variable for password
+  password: ${DB_PASSWORD}
+
+alerts:
+  slack:
+    enabled: true
+    # Set SLACK_WEBHOOK environment variable
+    webhook_url: ${SLACK_WEBHOOK}
+    # Minimum severity to alert on: CRITICAL, HIGH, MEDIUM, LOW
+    min_severity: HIGH
+
+  email:
+    enabled: false
+    smtp_host: smtp.gmail.com
+    smtp_port: 587
+    username: ""
+    password: ${SMTP_PASSWORD}
+    to: security@company.com
+
+scanning:
+  # Cron schedule for automated scans (every 6 hours)
+  schedule: "0 */6 * * *"
+  # Number of parallel workers for scanning
+  parallel_workers: 5
+
+remediation:
+  # Enable auto-remediation (use with caution!)
+  enabled: false
+  # Severities to auto-fix (empty = manual approval only)
+  auto_fix_severity: []
