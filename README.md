@@ -1,5 +1,15 @@
 # CloudSentry
 
+<div align="center">
+  <img src="assets/logo.svg" width="200" height="200" />
+</div>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.9%2B-blue?style=flat-square" alt="Python">
+  <img src="https://img.shields.io/badge/OCI-CSPM-00d4aa?style=flat-square" alt="OCI">
+  <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License">
+</p>
+
 **OCI Security Posture Monitor** - A Cloud Security Posture Management (CSPM) tool for Oracle Cloud Infrastructure.
 
 CloudSentry scans your OCI tenancy for security misconfigurations, stores findings in PostgreSQL, visualizes security posture in Grafana, and sends real-time alerts via Slack.
