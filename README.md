@@ -1,8 +1,14 @@
-# CloudSentry
-
 <div align="center">
-  <img src="assets/banner.svg" width="100%" />
+  <img src="assets/banner.svg" width="100%"/>
 </div>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/cloud-OCI-ff0033?style=flat-square" alt="cloud">
+  <img src="https://img.shields.io/badge/python-SDK-blue?style=flat-square" alt="python">
+  <img src="https://img.shields.io/badge/checks-CIS-00ff88?style=flat-square" alt="checks">
+  <img src="https://img.shields.io/badge/dashboards-Grafana-ff8800?style=flat-square" alt="dashboards">
+</p>
+
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.9%2B-blue?style=flat-square" alt="Python">
